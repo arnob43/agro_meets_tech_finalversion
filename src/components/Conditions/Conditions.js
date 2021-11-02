@@ -5,14 +5,14 @@ const Conditions = (props) => {
    return (
        <div>
        {/* check here to find out the different parameter names */}
-       {JSON.stringify(props.responseObj)}
+       {/* {JSON.stringify(props.responseObj)} */}
            {props.responseObj.cod === 200 ?
            
             <div>  
                    <p>It is currently {Math.round((props.responseObj.main.temp)-273.15)} degrees out with {props.responseObj.weather[0].description} in {(props.responseObj.name)}.</p>
                    
                  <table>    
-               
+               <thead>
                 <tr>
                 <th> Day </th>
                    <th>Humidity</th>
@@ -22,7 +22,9 @@ const Conditions = (props) => {
                     <th>Windspeed</th>
                    <th>Type</th>
                    </tr>
+                   </thead>
                    
+                   <tbody>
                     <tr>
                     <td> 1 </td>
                     <td>{(props.responseObj.main.humidity)}</td>
@@ -72,7 +74,7 @@ const Conditions = (props) => {
                     <td>{(props.responseObj.weather[0].description)}
                     </td>
                     </tr>
-                    
+                    </tbody>
                     
                      </table> 
                </div>
