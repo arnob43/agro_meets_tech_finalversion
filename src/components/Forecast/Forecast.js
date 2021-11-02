@@ -36,14 +36,14 @@ setLoading(false);
     };
    
    const handleKeypress = e => {
-      if(e.key == 'Enter'){
+      if(e.key === 'Enter'){
       handleSubmit();
     }
   };
 
    return (
       <div>
-      <h2>Find Weather Conditions projections for 16 days</h2>
+      <h2>Find Weather Conditions projections for 5 days</h2>
       <div className="search-box">
           <input 
             type="text"
