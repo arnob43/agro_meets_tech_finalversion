@@ -2,20 +2,24 @@ table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  color: rgba(255, 255, 255, 0.781);
+  font-weight: bold;
 }
 
 table td,
 table th {
-  border: 1px solid #ddd;
+  border: 1px solid rgb(26, 25, 25);
   padding: 6px;
 }
 
 table tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #b36359d5;
 }
-
+table tr:nth-child(odd) {
+  background-color: #e76056b9;
+}
 table tr:hover {
-  background-color: #ddd;
+  background-color: rgb(104, 104, 104);
 }
 
 table th {
@@ -24,14 +28,4 @@ table th {
   text-align: center;
   background-color: #8a1445;
   color: white;
-}
-
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
 }

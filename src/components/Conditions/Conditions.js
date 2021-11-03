@@ -9,7 +9,7 @@ const Conditions = (props) => {
            {props.responseObj.cod === 200 ?
            
             <div>  
-                   <p>It is currently {Math.round((props.responseObj.main.temp)-273.15)} degrees out with {props.responseObj.weather[0].description} in {(props.responseObj.name)}.</p>
+                   <p>It is currently {Math.round((props.responseObj.main.temp)-273.15)} degrees outside with {props.responseObj.weather[0].description} in {(props.responseObj.name)}.</p>
                    
                  <table>    
                <thead>

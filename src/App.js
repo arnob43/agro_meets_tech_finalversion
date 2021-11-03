@@ -1,5 +1,6 @@
 import './App.css';
 import Forecast from "./components/Forecast/Forecast";
+import './index.css';
 
 function App() {
   return (
