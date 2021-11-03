@@ -64,8 +64,7 @@ console.log(responseObj) }
                <Reco responseObj={responseObj} 
                   loading={loading}
                   query={query}
-               /> 
-
+               />     
     </div>
     </div>
    )
