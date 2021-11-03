@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Conditions from '../Conditions/Conditions';
+import Reco from '../recommendations/recommend';
 
 const Forecast = () => {
    const [query, setQuery] = useState({});
@@ -59,7 +60,10 @@ setLoading(false);
                responseObj={responseObj}
                loading={loading}
                />
+              
 
+
+           
     </div>
     </div>
    )
