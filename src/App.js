@@ -5,7 +5,7 @@ import './index.css';
 function App() {
   return (
     <div className="App">
-      <h1>Forecast-based farming App</h1>
+      <h1><span>Weather based farming App</span></h1>
       <main>
         {/* add weather fetching component */}
         <Forecast />

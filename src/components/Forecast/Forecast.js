@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Conditions from '../Conditions/Conditions';
+import Reco from '../recommendations/recommend';
 
 const Forecast = () => {
    const [query, setQuery] = useState({});
    const [responseObj, setResponseObj] = useState({});
-   let [loading, setLoading] = useState(false);
+   const [loading, setLoading] = useState(false);
   
    function getForecast() {
       setLoading(true);
@@ -17,22 +18,22 @@ const Forecast = () => {
 
 	} 
  }, [query])
+ 
 .then(response => response.json())
 .then(response => {
 setResponseObj(response);
 setQuery('')
-setLoading(false);
+ setLoading(false);
  })
 .catch(err => {
-   setLoading(false);
+    setLoading(false);
    console.log(err.message);
 });
-   }
+console.log(responseObj) }
+
 
    const handleSubmit = e => {
-      
       getForecast();
-      // or you can send data to backend
     };
    
    const handleKeypress = e => {
@@ -43,12 +44,12 @@ setLoading(false);
 
    return (
       <div>
-      <h2>Find Weather Conditions projections for 5 days</h2>
+      <h2><span> Enter your city name to find out the weather and recommendations </span> </h2>
       <div className="search-box">
           <input 
             type="text"
             className="search-bar"
-            placeHolder="Search your city"
+            placeholder="Search your city"
              value={query}
              onChange={e => {setQuery(e.target.value)}}
              onKeyPress={handleKeypress}
@@ -58,7 +59,12 @@ setLoading(false);
         <Conditions
                responseObj={responseObj}
                loading={loading}
+               query={query}
                />
+               <Reco responseObj={responseObj} 
+                  loading={loading}
+                  query={query}
+               /> 
 
     </div>
     </div>

@@ -10,22 +10,31 @@ table td,
 table th {
   border: 1px solid rgb(26, 25, 25);
   padding: 6px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: auto;
 }
 
 table tr:nth-child(even) {
   background-color: #b36359d5;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: auto;
 }
 table tr:nth-child(odd) {
   background-color: #e76056b9;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: auto;
 }
 table tr:hover {
   background-color: rgb(104, 104, 104);
 }
 
 table th {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: auto;
   background-color: #8a1445;
   color: white;
 }
